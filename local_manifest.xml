@@ -67,8 +67,8 @@
   <!-- local misc -->
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" remote="gh" revision="ics" />
   <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" remote="gh" revision="master" />
-  <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" remote="gh" revision="ics" />
-  <!-- <project path="system/su" name="CyanogenMod/android_system_su" remote="gh" revision="ics" /> -->
+  <project path="packages/apps/Superuser" name="CyanogenMod/android_packages_apps_Superuser" remote="gh" revision="jellybean" />
+  <project path="system/su" name="CyanogenMod/android_system_su" remote="gh" revision="jellybean" />
   <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="gh" revision="jellybean" />
   <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.4.3" name="STS-Dev-Team/arm-eabi-4.4.3" remote="gh" revision="master" />
   <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.7" name="STS-Dev-Team/arm-eabi-4.7" remote="gh" revision="master" />
@@ -83,6 +83,6 @@
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
 
-  <project path="packages/apps/otaupdater" name="OTAUpdateCenter/ota-update-centre" remote="gh" revision="noicon" />
+  <project path="packages/apps/otaupdater" name="STS-Dev-Team/ota-update-centre" remote="gh" revision="noicon" />
 
 </manifest>
