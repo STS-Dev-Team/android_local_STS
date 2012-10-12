@@ -79,6 +79,18 @@ Installing required packages
     libgl1-mesa-dev:i386 g++-multilib mingw32 tofrodos python-markdown \
     libxml2-utils xsltproc libncurses5-dev:i386 libreadline6-dev:i386 \
 	pngcrush schedtool 
+Installing required packages (Ubuntu 12.04)
+----------------------------
+
+Building on Ubuntu 12.04 is currently only experimentally supported and is not guaranteed to work on some branches.
+
+	sudo apt-get install git-core gnupg flex bison gperf build-essential \
+	zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
+	libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
+	libgl1-mesa-dev g++-multilib mingw32 openjdk-6-jdk tofrodos \
+	python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+
+  sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
     
     
 On Ubuntu 10.10:
@@ -88,6 +100,83 @@ On Ubuntu 10.10:
 On Ubuntu 11.10:
 
     sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
+	
+Configuring USB Access
+----------------------
+
+Under GNU/linux systems (and specifically under Ubuntu systems), regular users can't directly access USB devices by default. The system needs to be configured to allow such access.
+
+The recommended approach is to create a file /etc/udev/rules.d/51-android.rules (as the root user) and to copy the following lines in it. <username> must be replaced by the actual username of the user who is authorized to access the phones over USB.
+
+	# adb protocol on passion (Nexus One)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e12", MODE="0600", OWNER="<username>"
+	# fastboot protocol on passion (Nexus One)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0fff", MODE="0600", OWNER="<username>"
+	# adb protocol on crespo/crespo4g (Nexus S)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e22", MODE="0600", OWNER="<username>"
+	# fastboot protocol on crespo/crespo4g (Nexus S)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e20", MODE="0600", OWNER="<username>"
+	# adb protocol on stingray/wingray (Xoom)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="22b8", ATTR{idProduct}=="70a9", MODE="0600", OWNER="<username>"
+	# fastboot protocol on stingray/wingray (Xoom)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="708c", MODE="0600", OWNER="<username>"
+	# adb protocol on maguro/toro (Galaxy Nexus)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", ATTR{idProduct}=="6860", MODE="0600", OWNER="<username>"
+	# fastboot protocol on maguro/toro (Galaxy Nexus)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e30", MODE="0600", OWNER="<username>"
+	# adb protocol on panda (PandaBoard)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d101", MODE="0600", OWNER="<username>"
+	# fastboot protocol on panda (PandaBoard)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d022", MODE="0600", OWNER="<username>"
+	# usbboot protocol on panda (PandaBoard)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d00f", MODE="0600", OWNER="<username>"
+	# usbboot protocol on panda (PandaBoard ES)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="0451", ATTR{idProduct}=="d010", MODE="0600", OWNER="<username>"
+	# adb protocol on grouper (Nexus 7)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e42", MODE="0600", OWNER="<username>"
+	# fastboot protocol on grouper (Nexus 7)
+	SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4e40", MODE="0600", OWNER="<username>"
+	
+Those new rules take effect the next time a device is plugged in. It might therefore be necessary to unplug the device and plug it back into the computer.
+
+This is known to work on both Ubuntu Hardy Heron (8.04.x LTS) and Lucid Lynx (10.04.x LTS). Other versions of Ubuntu or other variants of GNU/linux might require different configurations.
+
+
+Setting up ccache
+-----------------
+
+You can optionally tell the build to use the ccache compilation tool. Ccache acts as a compiler cache that can be used to speed-up rebuilds. This works very well if you do "make clean" often, or if you frequently switch between different build products.
+
+Put the following in your .bashrc or equivalent.
+
+	export USE_CCACHE=1
+	
+By default the cache will be stored in ~/.ccache. If your home directory is on NFS or some other non-local filesystem, you will want to specify the directory in your .bashrc as well.
+
+	export CCACHE_DIR=<path-to-your-cache-directory>
+	
+The suggested cache size is 50-100GB. You will need to run the following command once you have downloaded the source code.
+
+	prebuilt/linux-x86/ccache/ccache -M 50G
+	
+This setting is stored in the CCACHE_DIR and is persistent.
+
+Using a separate output directory
+By default, the output of each build is stored in the out/ subdirectory of the matching source tree.
+
+On some machines with multiple storage devices, builds are faster when storing the source files and the output on separate volumes. For additional performance, the output can be stored on a filesystem optimized for speed instead of crash robustness, since all files can be re-generated in case of filesystem corruption.
+
+To set this up, export the OUT_DIR_COMMON_BASE variable to point to the location where your output directories will be stored.
+
+	export OUT_DIR_COMMON_BASE=<path-to-your-out-directory>
+	
+The output directory for each separate source tree will be named after the directory holding the source tree.
+
+For instance, if you have source trees as /source/master1 and /source/master2 and OUT_DIR_COMMON_BASE is set to /output, the output directories will be /output/master1 and /output/master2.
+
+It's important in that case to not have multiple source trees stored in directories that have the same name, as those would end up sharing an output directory, with unpredictable results.
+
+This is only supported on Jelly Bean (4.1) and newer, including the master branch.
 
 Create the Directories
 ----------------------
@@ -133,15 +222,24 @@ To initialize your local repository using the AOSP Master Branch manifest, use c
 
     repo init -u https://android.googlesource.com/platform/manifest
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jb-aosp-stock/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/APK-Multi-Roms/android_local_APK/jb-aosp-stock/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/jb-aosp-stock/local_manifest.xml
+    	( or Download: https://github.com/APK-Multi-Roms/android_local_APK/blob/jb-aosp-stock/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:
 
     repo sync
 
+Copy proprietary files
+----------------------
+
+NOTE: This only needs done the first time you build. 
+You will need to have a spyder with a working copy of AOSP install and ADB working on the computer. This script will copy the proprietary files from the device.
+Connect the device to the computer and ensure that ADB is working properly.
+cd ~/android/system/device/motorola/spyder/
+./extract-files.sh
+NOTE: If some hardware isn't working, like camcorder or FM radio, you will need to find the updated prop blobs.
 Building the System
 -------------------
 
@@ -154,3 +252,21 @@ Initialize the environment with the envsetup.sh script. Note that replacing "sou
 	lunch
 
 Enter the number of the build you want to start and press enter
+
+Emulate an Android Device
+-------------------------
+The emulator is added to your path automatically by the build process. To run the emulator, type
+
+	$ emulator
+
+Using ccache
+------------
+
+ccache is a compiler cache for C and C++ that can help make builds faster. In the root of the source tree, do the following:
+
+	$ export USE_CCACHE=1
+	$ export CCACHE_DIR=/<path_of_your_choice>/.ccache
+	$ prebuilt/linux-x86/ccache/ccache -M 20G
+You can watch ccache being used by doing the following:
+
+	$ watch -n1 -d prebuilt/linux-x86/ccache/ccache -s
