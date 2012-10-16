@@ -74,7 +74,6 @@
   <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
 
   <!-- local misc -->
-  <!-- local misc -->
   <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" revision="jellybean"/>
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
   <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" revision="master" />
@@ -91,6 +90,13 @@
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
 
-  <project path="packages/apps/otaupdater" name="STS-Dev-Team/ota-update-centre" revision="noicon" />
+  <project path="packages/apps/otaupdater" name="APK-Multi-Roms/ota-update-centre" remote="gh" revision="noicon" />
+  
+  <!-- local BootMenu -->
+	
+  <project path="system/app" name="BootMenu-Rom-Base/android_system_app" remote="gh" revision="master" />
+  <project path="system/bin" name="BootMenu-Rom-Base/android_system_bin" remote="gh" revision="master" />
+  <project path="system/etc/rootfs" name="BootMenu-Rom-Base/android_system_etc_rootfs" remote="gh" revision="master" />
+  <project path="system/etc/rootfs2" name="BootMenu-Rom-Base/android_system_etc_rootfs2" remote="gh" revision="master" />
 
 </manifest>
