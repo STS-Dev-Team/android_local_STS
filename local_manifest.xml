@@ -87,6 +87,9 @@
   
   <!-- local BootMenu -->
 	
-		<project path="system" name="APK-Multi-Roms / BootMenu_ROM_base" remote="gh" revision="master" />
+  <project path="system/app" name="BootMenu-Rom-Base/android_system_app" remote="gh" revision="master" />
+  <project path="system/bin" name="BootMenu-Rom-Base/android_system_bin" remote="gh" revision="master" />
+  <project path="system/etc/rootfs" name="BootMenu-Rom-Base/android_system_etc_rootfs" remote="gh" revision="master" />
+  <project path="system/etc/rootfs2" name="BootMenu-Rom-Base/android_system_etc_rootfs2" remote="gh" revision="master" />
 
 </manifest>
