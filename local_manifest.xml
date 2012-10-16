@@ -59,20 +59,21 @@
 
   <!-- local devices -->
   <project path="device/motorola/common" name="APK-Multi-Roms/android_device_motorola_common" revision="jb" />
-  <project path="device/motorola/edison" name="STS-Dev-Team/android_device_motorola_edison" revision="jb" />
-  <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb" />
-  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
-  <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" revision="jb" />
-  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb" />
+  <!-- <project path="device/motorola/edison" name="STS-Dev-Team/android_device_motorola_edison" remote="gh" revision="jb" /> -->
+  <!-- <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" remote="gh" revision="jb" /> -->
+  <project path="device/motorola/spyder" name="APK-Multi-Roms/android_device_motorola_spyder" remote="gh" revision="jb" />
+  <!-- <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" remote="gh" revision="jb" /> -->
+  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" remote="gh" revision="jb" />
 
   <!-- local vendor -->
-  <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb" />
-  <project path="vendor/motorola/edison" name="STS-Dev-Team/android_vendor_motorola_edison" revision="master" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="master" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="master"  />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="master" />
+  <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="jb" />
+  <!-- <project path="vendor/motorola/edison" name="STS-Dev-Team/android_vendor_motorola_edison" remote="gh" revision="master" /> -->
+  <!-- <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" remote="gh" revision="master" /> -->
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="master" />
+  <!-- <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" remote="gh" revision="master"  /> -->
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
 
+  <!-- local misc -->
   <!-- local misc -->
   <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" revision="jellybean"/>
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" revision="ics" />
