@@ -253,6 +253,16 @@ Initialize the environment with the envsetup.sh script. Note that replacing "sou
 
 Enter the number of the build you want to start and press enter
 
+now run this command
+
+	make -j16 otapackage 2>&1 | tee log
+
+This will compile the source as well as make a printout of what going on in a file called log located here:
+
+	~/android/system/
+
+this will help out with reporting errors by allowing you to copy the report to pastebin.com or your gist and then post in the desired forums
+
 Emulate an Android Device
 -------------------------
 The emulator is added to your path automatically by the build process. To run the emulator, type
