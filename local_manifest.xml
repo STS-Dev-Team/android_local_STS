@@ -4,6 +4,9 @@
   <remote  name="omapzoom"
            fetch="git://git.omapzoom.org/" />
 
+<remote  name="gh"
+           fetch="git://git.github.com/" />
+
   <!-- CM removals -->
   <!-- <remove-project name="CyanogenMod/android_bionic" /> -->
   <remove-project name="CyanogenMod/android_build" />
