@@ -34,6 +34,9 @@
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
   
+  <!-- BootMenu -->
+  <remove-project name="CyanogenMod/android_bootable_recovery" />
+  
   <!-- CM replacements -->
   <project path="build" name="STS-Dev-Team/android_build" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -96,6 +99,7 @@
   <project path="packages/apps/otaupdater" name="APK-Multi-Roms/ota-update-centre" remote="gh" revision="noicon" />
   
   <!-- local BootMenu -->
+  <project path="bootable/recovery" name="whirleyes/android_bootable_recovery_touch" revision="jellybean" />
 	
   <project path="system/app" name="BootMenu-Rom-Base/android_system_app" remote="gh" revision="master" />
   <project path="system/bin" name="BootMenu-Rom-Base/android_system_bin" remote="gh" revision="master" />
