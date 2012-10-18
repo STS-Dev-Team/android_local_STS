@@ -51,12 +51,17 @@ scripts prepared by Janusz Dziemidowicz.
 * https://github.com/rraptorr/sun-java6
 * https://github.com/rraptorr/oracle-java7
 
+Installing java pacakages
+-------------------------
+
 	sudo apt-get install sun-java6-jre
+	
 	sudo apt-get install sun-java6-jdk
 
 Or if you ran the script with the -7 option.
 
 	sudo apt-get install oracle-java7-jre
+	
 	sudo apt-get install oracle-java7-jdk
 
 If you already have the *"official"* Ubuntu packages installed then you
@@ -137,16 +142,18 @@ To initialize your local repository using the Cyanogemod manifest, use commands 
 
 Then to sync up:
 
-    repo sync
+	repo sync
 
 Sync Relevant Repositories
 
 NOTE: This only needs to be done the first time after syncing the repository. If this step has been completed, skip to Copy Proprietary Files.
 By default, CyanogenMod 9 only syncs the core android repositories and none of the device or kernel trees to save both bandwidth and time. Run the following command to sync the necessary components for the device:
    
-   . build/envsetup.sh && breakfast spyder
-   . build/envsetup.sh && breakfast umts_spyder
-or
+	. build/envsetup.sh && breakfast spyder
+   
+ or  
+ 
+	. build/envsetup.sh && breakfast umts_spyder
 
 The system will automatically begin pulling the device repository and all required dependencies.
 
@@ -157,11 +164,14 @@ NOTE: This only needs to be run once. If these steps have already been performed
 This step requires possession of the Epicmtd with a working copy of CyanogenMod 9 installed and ADB working on the computer. This script will copy the proprietary files from the device.
 Connect the device to the computer and run the following commands:
 
-   cd ~/android/system/device/motorola/spyder/
+	cd ~/android/system/device/motorola/spyder/
+   
 or
-   cd ~/android/system/device/motorola/umts_spyder/
 
- ./extract-files.sh
+	cd ~/android/system/device/motorola/umts_spyder/ 
+
+	./extract-files.sh
+ 
 NOTE: If some hardware isn't functioning properly, this script may need to be run again in case there are updated proprietary files.
 
 Download Prebuilts
@@ -169,7 +179,7 @@ Download Prebuilts
 
 Download Prebuilts needed by the build:
 
-   ~/android/system/vendor/cm/get-prebuilts
+	~/android/system/vendor/cm/get-prebuilts
 
 Building the System
 -------------------
@@ -177,8 +187,10 @@ Building the System
 Check for updates
 ------------------
 First, check for updates in the source:
-   cd ~/android/system/
-   repo sync
+
+	cd ~/android/system/
+   
+	repo sync
    
 Configure Build & Compile
 ------------------
@@ -189,13 +201,16 @@ Initialize the environment with the envsetup.sh script. Note that replacing "sou
 
 Now, the environment must be configured for the build process and then begin compilation for the spyder or umts_spyder.
 
-   . build/envsetup.sh && brunch spyder
+	. build/envsetup.sh && brunch spyder
+   
 or
-   . build/envsetup.sh && brunch umts_spyder
 
-   or you can select from a list this way
+	. build/envsetup.sh && brunch umts_spyder
+
+or you can select from a list this way
    
 	. build/envsetup.sh
+	
 	lunch
 
 Enter the number of the build you want to start and press enter
