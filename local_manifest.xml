@@ -66,12 +66,12 @@
   <!-- local devices -->
   <project path="device/motorola/common" name="MotorolaSpyder/android_device_motorola_common" remote="gh" revision="jb" />
   <project path="device/motorola/spyder" name="MotorolaSpyder/android_device_motorola_spyder" remote="gh" revision="jb" />
-  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" remote="gh" revision="jb" />
+  <project path="device/motorola/umts_spyder" name="MotorolaSpyder/android_device_motorola_umts_spyder" remote="gh" revision="jb" />
 
   <!-- local vendor -->
-  <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="jb" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="master" />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
+  <project path="vendor/motorola/common" name="MotorolaSpyder/android_vendor_motorola_common" remote="gh" revision="jb" />
+  <project path="vendor/motorola/spyder" name="MotorolaSpyder/android_vendor_motorola_spyder" remote="gh" revision="master" />
+  <project path="vendor/motorola/umts_spyder" name="MotorolaSpyder/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
 
   <!-- local misc -->
   <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" revision="jellybean"/>
