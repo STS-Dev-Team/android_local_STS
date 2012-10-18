@@ -139,14 +139,62 @@ Then to sync up:
 
     repo sync
 
+Sync Relevant Repositories
+
+NOTE: This only needs to be done the first time after syncing the repository. If this step has been completed, skip to Copy Proprietary Files.
+By default, CyanogenMod 9 only syncs the core android repositories and none of the device or kernel trees to save both bandwidth and time. Run the following command to sync the necessary components for the device:
+   
+   . build/envsetup.sh && breakfast spyder
+   . build/envsetup.sh && breakfast umts_spyder
+or
+
+The system will automatically begin pulling the device repository and all required dependencies.
+
+Copy Proprietary Files
+----------------------
+
+NOTE: This only needs to be run once. If these steps have already been performed, skip to Download Prebuilts.
+This step requires possession of the Epicmtd with a working copy of CyanogenMod 9 installed and ADB working on the computer. This script will copy the proprietary files from the device.
+Connect the device to the computer and run the following commands:
+
+   cd ~/android/system/device/motorola/spyder/
+or
+   cd ~/android/system/device/motorola/umts_spyder/
+
+ ./extract-files.sh
+NOTE: If some hardware isn't functioning properly, this script may need to be run again in case there are updated proprietary files.
+
+Download Prebuilts
+------------------
+
+Download Prebuilts needed by the build:
+
+   ~/android/system/vendor/cm/get-prebuilts
+
 Building the System
 -------------------
+
+Check for updates
+------------------
+First, check for updates in the source:
+   cd ~/android/system/
+   repo sync
+   
+Configure Build & Compile
+------------------
 
 The basic sequence of build commands is as follows:
 
 Initialize the environment with the envsetup.sh script. Note that replacing "source" with a single dot saves a few characters, and the short form is more commonly used in documentation.
 
+Now, the environment must be configured for the build process and then begin compilation for the spyder or umts_spyder.
 
+   . build/envsetup.sh && brunch spyder
+or
+   . build/envsetup.sh && brunch umts_spyder
+
+   or you can select from a list this way
+   
 	. build/envsetup.sh
 	lunch
 
