@@ -4,7 +4,7 @@
   <remote  name="omapzoom"
            fetch="git://git.omapzoom.org/" />
 
-<remote  name="gh"
+  <remote  name="gh"
            fetch="git://github.com/" />
 
   <!-- CM removals -->
@@ -33,6 +33,10 @@
   <remove-project name="CyanogenMod/android_packages_providers_DrmProvider" />
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
+  
+  <!-- BootMenu CM removals -->
+  <remove-project name="CyanogenMod/android_bootable_recovery" />
+  <remove-project name="CyanogenMod/android_external_bootmenu" />
   
   
   <!-- CM replacements -->
@@ -90,6 +94,9 @@
 
   <project path="packages/apps/otaupdater" name="MotorolaSpyder/ota-update-centre" remote="gh" revision="noicon" />
   
-	
-
+  <!-- local BootMenu -->
+  <project path="bootable/recovery" name="whirleyes/android_bootable_recovery_touch" revision="jellybean" />
+  <project path="external/bootmenu" name="whirleyes/android_external_bootmenu" />
+  
+  
 </manifest>
