@@ -147,7 +147,7 @@ Then to sync up:
 Sync Relevant Repositories
 
 NOTE: This only needs to be done the first time after syncing the repository. If this step has been completed, skip to Copy Proprietary Files.
-By default, CyanogenMod 9 only syncs the core android repositories and none of the device or kernel trees to save both bandwidth and time. Run the following command to sync the necessary components for the device:
+By default, CyanogenMod 10 only syncs the core android repositories and none of the device or kernel trees to save both bandwidth and time. Run the following command to sync the necessary components for the device:
    
 	. build/envsetup.sh && breakfast spyder
    
@@ -213,4 +213,15 @@ or you can select from a list this way
 	
 	lunch
 
-Enter the number of the build you want to start and press enter
+Enter the number of the build you want to compile and press 
+
+To start the compiler type this:
+
+	make -j16 otapackage 2>&1 | tee compiler.log
+
+This will begin the process of compiling the actual ROM Plus it will Create a Log File Here:
+
+	cd ~/android/system/
+	
+Look for a file called "Compiler.log" but be warned the file will be huge a few Megabites in size because it logs the entire process of which happened when complingiling which you can use to debug and see what went wrong in case something messed up while it was compiling
+
