@@ -34,7 +34,8 @@
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
   
-  <!-- BootMenu CM removals -->
+  <!-- ProjectLense BootMenu CM removals -->
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" />
   <remove-project name="CyanogenMod/android_bootable_recovery" />
   <remove-project name="CyanogenMod/android_external_bootmenu" />
   
@@ -94,9 +95,10 @@
 
   <project path="packages/apps/otaupdater" name="MotorolaSpyder/ota-update-centre" remote="gh" revision="noicon" />
   
-  <!-- local BootMenu -->
-  <project path="bootable/recovery" name="whirleyes/android_bootable_recovery_touch" revision="jellybean" />
-  <project path="external/bootmenu" name="whirleyes/android_external_bootmenu" />
+  <!-- local ProjectLense BootMenu CM Replacements-->
+  <project path="bootable/recovery" name="ProjectLense/android_bootable_recovery" revision="jellybean" />
+  <project path="external/bootmenu" name="ProjectLense/android_external_bootmenu" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" name="ProjectLense/android_prebuilts_gcc_linux-x86-32_arm_arm-linux-androideabi-4.6" remote="gh" revision="jellybean" />
   
   
 </manifest>
