@@ -40,13 +40,13 @@
   
   
   <!-- CM replacements -->
-  <project path="build" name="STS-Dev-Team/android_build" >
+  <project path="build" name="MotorolaSpyder/android_build" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <!-- <project path="bionic" name="STS-Dev-Team/android_bionic" /> -->
   <project path="development" name="STS-Dev-Team/android_development" />
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
-  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-3way" />
+  <project path="frameworks/base" name="MotorolaSpyder/android_frameworks_base" revision="jellybean-3way" />
   <project path="frameworks/native" name="STS-Dev-Team/android_frameworks_native" />
   <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware" />
   <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
@@ -54,16 +54,16 @@
   <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" revision="jellybean-stock" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" revision="jellybean" />
   <project path="packages/apps/Bluetooth" name="STS-Dev-Team/android_packages_apps_Bluetooth" />
-  <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
-  <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
+  <project path="packages/apps/Contacts" name="MotorolaSpyder/android_packages_apps_Contacts" />
+  <project path="packages/apps/Mms" name="MotorolaSpyder/android_packages_apps_Mms" />
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
-  <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="MotorolaSpyder/android_packages_apps_Settings" />
   <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Stk" />
   <project path="packages/apps/VoiceDialer" name="STS-Dev-Team/android_packages_apps_VoiceDialer" />
-  <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
+  <project path="packages/providers/ContactsProvider" name="MotorolaSpyder/android_packages_providers_ContactsProvider" />
   <project path="packages/providers/DrmProvider" name="STS-Dev-Team/android_packages_providers_DrmProvider" />
   <project path="packages/providers/TelephonyProvider" name="STS-Dev-Team/android_packages_providers_TelephonyProvider" />
-  <project path="system/core" name="STS-Dev-Team/android_system_core" />
+  <project path="system/core" name="MotorolaSpyder/android_system_core" />
 
   <!-- local devices -->
   <project path="device/motorola/common" name="MotorolaSpyder/android_device_motorola_common" remote="gh" revision="jb" />
