@@ -74,7 +74,7 @@
   <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
 
   <!-- local misc -->
-  <project path="frameworks/opt/mms" name="STS-Dev-Team/android_frameworks_opt_mms" revision="master"/>
+  <project path="frameworks/opt/mms" name="STS-Dev-Team/android_frameworks_opt_mms" remote="gh" revision="master"/>
   <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" remote="gh" revision="jellybean"/>
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" remote="gh" revision="ics" />
   <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" remote="gh" revision="master" />
