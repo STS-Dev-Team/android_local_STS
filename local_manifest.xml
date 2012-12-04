@@ -1,53 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="gh"
-           fetch="git://github.com/" />
-
-  <!-- CM removals -->
-  <remove-project name="CyanogenMod/android_build" />
-  <remove-project name="CyanogenMod/android_development" />
-  <remove-project name="CyanogenMod/android_frameworks_base" />
-  <remove-project name="CyanogenMod/android_hardware_ril" />
-  <remove-project name="CyanogenMod/android_packages_apps_Contacts" />
-  <remove-project name="CyanogenMod/android_packages_apps_Mms" />
-  <remove-project name="CyanogenMod/android_packages_apps_Phone" />
-  <remove-project name="CyanogenMod/android_packages_apps_Settings" />
-  <remove-project name="CyanogenMod/android_packages_apps_Stk" />
-  <remove-project name="CyanogenMod/android_packages_apps_VoiceDialer" />
-  <remove-project name="CyanogenMod/android_packages_apps_Bluetooth" />
-  <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
-  <remove-project name="CyanogenMod/android_packages_providers_ContactsProvider" />
-  <remove-project name="CyanogenMod/android_packages_providers_DrmProvider" />
-  <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
-
-  <!-- CM replacements -->
-  <project path="build" name="STS-Dev-Team/android_build" revision="jellybean-msm8960" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
-  <project path="development" name="STS-Dev-Team/android_development" />
-  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-msm8960" />
-  <project path="hardware/ril" name="STS-Dev-Team/android_hardware_ril" revision="jellybean-msm8960" />
-  <project path="packages/apps/Bluetooth" name="STS-Dev-Team/android_packages_apps_Bluetooth" />
-  <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
-  <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
-  <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" revision="jellybean-msm8960" />
-  <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" revision="jellybean-msm8960" />
-  <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Stk" />
-  <project path="packages/apps/VoiceDialer" name="STS-Dev-Team/android_packages_apps_VoiceDialer" />
-  <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
-  <project path="packages/providers/DrmProvider" name="STS-Dev-Team/android_packages_providers_DrmProvider" />
-  <project path="packages/providers/TelephonyProvider" name="STS-Dev-Team/android_packages_providers_TelephonyProvider" revision="jellybean-msm8960" />
-
-  <!-- AOSP additions -->
-  <project path="frameworks/opt/mms" name="STS-Dev-Team/android_frameworks_opt_mms" revision="master"/>
-  <project path="frameworks/opt/telephony" name="STS-Dev-Team/android_frameworks_opt_telephony" revision="jellybean-msm8960"/>
-
-  <!-- local projects -->
-  <project path="device/motorola/msm8960-common" name="STS-Dev-Team/android_device_motorola_msm8960-common" remote="gh" revision="jellybean" />
-  <project path="vendor/motorola/msm8960-common" name="STS-Dev-Team/android_vendor_motorola_msm8960-common" remote="gh" revision="jellybean" />
-  <project path="device/motorola/scorpion_mini" name="STS-Dev-Team/android_device_motorola_scorpion_mini" remote="gh" revision="jellybean" />
-  <project path="vendor/motorola/scorpion_mini" name="STS-Dev-Team/android_vendor_motorola_scorpion_mini" remote="gh" revision="jellybean" />
-  <project path="device/motorola/vanquish" name="STS-Dev-Team/android_device_motorola_vanquish" remote="gh" revision="jellybean" />
-  <project path="vendor/motorola/vanquish" name="STS-Dev-Team/android_vendor_motorola_vanquish" remote="gh" revision="jellybean" />
-  <project path="kernel/motorola/msm8960-common" name="STS-Dev-Team/android_kernel_motorola_msm8960-common" remote="gh" revision="jellybean" />
+  <remote fetch="git://github.com/" name="gh" />
+  <remote fetch="git://codeaurora.org/" name="caf" />
+  <project name="STS-Dev-Team/android_device_motorola_msm8960-common" path="device/motorola/msm8960-common" remote="gh" revision="jellybean-stable" />
+  <project name="STS-Dev-Team/android_vendor_motorola_msm8960-common" path="vendor/motorola/msm8960-common" remote="gh" revision="jellybean" />
+  <project name="STS-Dev-Team/android_device_motorola_scorpion_mini" path="device/motorola/scorpion_mini" remote="gh" revision="jellybean-stable" />
+  <project name="STS-Dev-Team/android_vendor_motorola_scorpion_mini" path="vendor/motorola/scorpion_mini" remote="gh" revision="jellybean" />
+  <project name="STS-Dev-Team/android_device_motorola_vanquish" path="device/motorola/vanquish" remote="gh" revision="jellybean-stable" />
+  <project name="STS-Dev-Team/android_vendor_motorola_vanquish" path="vendor/motorola/vanquish" remote="gh" revision="jellybean" />
+  <project name="STS-Dev-Team/android_kernel_motorola_msm8960-common" path="kernel/motorola/msm8960-common" remote="gh" revision="jb_chocolate" />
 </manifest>

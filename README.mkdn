@@ -14,7 +14,7 @@ Make a build directory:
 
 To initialize your local repository using the Cyanogemod manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b jellybean
+    repo init -u git://github.com/CyanogenMod/android.git -b jellybean-stable
 
     curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jellybean-cm-msm8960/local_manifest.xml
 
@@ -24,3 +24,17 @@ To initialize your local repository using the Cyanogemod manifest, use commands 
 Then to sync up:
 
     repo sync
+
+You will need to know how to do some cherry-picks:
+
+http://review.cyanogenmod.org/#/c/26060/  PhoneProxy: On v6 or greater RIL, when LTE_ON_CDMA is TRUE
+
+http://review.cyanogenmod.org/#/c/26490/  CatService: Alpha ID fix for OPEN_CHANNEL and other p-commands
+
+http://review.cyanogenmod.org/#/c/27227/  liblog: add required function
+
+http://review.cyanogenmod.org/#/c/27231/  camera: add power mode support
+
+http://review.cyanogenmod.org/#/c/27229/  camera: improve power mode support
+
+http://review.cyanogenmod.org/#/c/27228/  camera: add ISO3200 and ISO6400
