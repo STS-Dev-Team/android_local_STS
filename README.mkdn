@@ -31,10 +31,4 @@ http://review.cyanogenmod.org/#/c/26060/  PhoneProxy: On v6 or greater RIL, when
 
 http://review.cyanogenmod.org/#/c/26490/  CatService: Alpha ID fix for OPEN_CHANNEL and other p-commands
 
-http://review.cyanogenmod.org/#/c/27227/  liblog: add required function
-
-http://review.cyanogenmod.org/#/c/27231/  camera: add power mode support
-
-http://review.cyanogenmod.org/#/c/27229/  camera: improve power mode support
-
-http://review.cyanogenmod.org/#/c/27228/  camera: add ISO3200 and ISO6400
+http://review.cyanogenmod.org/#/c/27797/ Init: Allow building of init that is compatible with second init boot
