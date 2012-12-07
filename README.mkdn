@@ -14,7 +14,7 @@ Make a build directory:
 
 To initialize your local repository using the Cyanogemod manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b jellybean-stable
+    repo init -u git://github.com/CyanogenMod/android.git -b jellybean
 
     curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jellybean-cm-msm8960/local_manifest.xml
 
