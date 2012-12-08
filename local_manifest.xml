@@ -19,7 +19,7 @@
   <project path="external/wpa_supplicant_8" name="STS-Dev-Team/android_external_wpa_supplicant_8" />
   <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
   <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" />
-  <project path="hardware/ti/wpan" name="git@github.com:Hashcode/android_hardware_ti_wpan.git" />
+  <project path="hardware/ti/wpan" name="git@github.com:Hashcode/android_hardware_ti_wpan" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
 
   <!-- omapzoom projects -->
