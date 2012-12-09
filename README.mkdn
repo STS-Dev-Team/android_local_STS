@@ -14,11 +14,11 @@ Make a build directory:
 
 To initialize your local repository using the Cyanogemod manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b jellybean
+    repo init -u git://github.com/CyanogenMod/android.git -b mr1-staging
 
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jellybean-cm-msm8960/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/4.2-msm8960/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/jellybean-cm-msm8960/local_manifest.xml
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/4.2-msm8960/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:
@@ -27,8 +27,22 @@ Then to sync up:
 
 You will need to know how to do some cherry-picks:
 
-http://review.cyanogenmod.org/#/c/26060/  PhoneProxy: On v6 or greater RIL, when LTE_ON_CDMA is TRUE
+http://review.cyanogenmod.org/#/c/26744/  PhoneProxy: On v6 or greater RIL, when LTE_ON_CDMA is TRUE
 
-http://review.cyanogenmod.org/#/c/26490/  CatService: Alpha ID fix for OPEN_CHANNEL and other p-commands
+http://review.cyanogenmod.org/#/c/26751/  TelephonyProperties: Alpha ID fix for OPEN_CHANNEL and other p-commands (1/2)
+
+http://review.cyanogenmod.org/#/c/26752/ CatService: Alpha ID fix for OPEN_CHANNEL and other p-commands (2/2)
 
 http://review.cyanogenmod.org/#/c/27797/ Init: Allow building of init that is compatible with second init boot
+
+http://review.cyanogenmod.org/#/c/27889/ camera: add power mode support
+
+http://review.cyanogenmod.org/#/c/27888/ camera: add ISO3200 and ISO6400
+
+http://review.cyanogenmod.org/#/c/27887/ camera: add power mode support
+
+http://review.cyanogenmod.org/#/c/27385/ display: Add option to disable hardware VSYNC
+
+http://review.cyanogenmod.org/#/c/27386/ display: Add option to disable MSMFB_OVERLAY
+
+http://review.cyanogenmod.org/#/c/27387/ display: add things covered by QCOM_ICS_COMPAT
