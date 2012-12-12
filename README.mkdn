@@ -14,11 +14,11 @@ Make a build directory:
 
 To initialize your local repository using the Cyanogemod manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b jellybean-stable
+    repo init -u git://github.com/CyanogenMod/android.git -b mr1-staging
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/jellybean-stable-cm-stock/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/mr1-staging-cm-stock/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/jellybean-stable-cm-stock/local_manifest.xml
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/mr1-staging-cm-stock/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:
