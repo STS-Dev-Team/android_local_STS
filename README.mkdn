@@ -1,4 +1,4 @@
-Local manifest addon for Cyanogenmod 10.1 (JB 4.2.1) for OMAP4 devices
+Local manifest addon for KILLrom (JB 4.2.1) for OMAP4 devices
 
 Getting Started
 ---------------
@@ -12,13 +12,13 @@ Make a build directory:
 	cd Android (or the name  you chose)
 	
 
-To initialize your local repository using the Cyanogemod manifest, use commands like these:
+To initialize your local repository using the AOSP manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+    repo init -u https://android.googlesource.com/platform/manifest -b android-4.2.1_r1
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/cm-10.1/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/killrom/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/cm-10.1/local_manifest.xml
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/killrom/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:

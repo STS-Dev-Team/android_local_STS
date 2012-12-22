@@ -3,19 +3,89 @@
 
   <remote  name="omapzoom" fetch="git://git.omapzoom.org/" />
   <remote  name="gh" fetch="git://github.com/" />
+  <remote name="linaro" fetch="git://android.git.linaro.org" />
 
-  <remove-project name="CyanogenMod/android_frameworks_base" />
-  <remove-project name="CyanogenMod/android_hardware_libhardware_legacy" />
-  <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
-  <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
-  <remove-project name="CyanogenMod/android_system_core" />
+  <remove-project name="device/asus/grouper" />
+  <remove-project name="device/lge/mako" />
+  <remove-project name="device/samsung/maguro" />
+  <remove-project name="device/samsung/toro" />
+  <remove-project name="device/samsung/tuna" />
+  <remove-project name="platform/build" />
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/external/libnfc-nci" />
+  <remove-project name="platform/external/oprofile" />
+  <remove-project name="platform/external/elfutils" />
+  <remove-project name="platform/external/ppp" />
+  <remove-project name="platform/external/quake" />
+  <remove-project name="platform/external/v8" />
+  <remove-project name="platform/packages/apps/Nfc" />
+  <remove-project name="platform/frameworks/av" />
+  <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <remove-project name="platform/frameworks/rs" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/ti/omap4xxx" />
+  <remove-project name="platform/packages/apps/Contacts" />
+  <remove-project name="platform/packages/apps/Email" />
+  <remove-project name="platform/packages/apps/Exchange" />
+  <remove-project name="platform/packages/apps/Calendar" />
+  <remove-project name="platform/packages/apps/Protips" />
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
+  <remove-project name="platform/packages/apps/Launcher2" />
+  <remove-project name="platform/packages/apps/Mms" />
+  <remove-project name="platform/packages/apps/Music" />
+  <remove-project name="platform/packages/apps/Provision" />
+  <remove-project name="platform/packages/apps/QuickSearchBox" />
+  <remove-project name="platform/packages/apps/Phone" />
+  <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/extras" />
+  <remove-project name="platform/system/security" />
 
-  <!-- CM replacements -->
-  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
+  <!-- AOSP STS specific removals -->
+  <remove-project name="platform/hardware/libhardware_legacy" />
+  <remove-project name="platform/hardware/ti/wpan" />
+
+
   <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
   <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" />
-  <project path="system/core" name="STS-Dev-Team/android_system_core" />
+
+  <!-- AOSP replacements -->
+  <project path="build" name="DroidTh3ory/android_build" remote="gh" revision="killrom">
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="bionic" name="ParanoidAndroid/android_bionic" remote="gh" revision="jellybean" />
+  <project path="external/libnfc-nci" name="platform/external/libnfc-nci" revision="jb-mr1-release" />
+  <project path="external/oprofile" name="platform/external/oprofile" remote="linaro" revision="linaro_android_4.2.1" />
+  <project path="external/elfutils" name="platform/external/elfutils" remote="linaro" revision="master" />
+  <project path="external/ppp" name="platform/external/ppp" revision="master" />
+  <project path="external/quake" name="platform/external/quake" remote="linaro" revision="linaro_android_4.2.1" />
+  <project path="external/v8" name="platform/external/v8" remote="linaro" revision="linaro_android_4.2.1" />
+  <project path="frameworks/av" name="DroidTh3ory/platform_frameworks_av" remote="gh" revision="killrom" />
+  <project path="frameworks/base" name="DroidTh3ory/platform_frameworks_base" remote="gh" revision="killrom" />
+  <project path="frameworks/native" name="DroidTh3ory/platform_frameworks_native" remote="gh" revision="killrom" />
+  <project path="frameworks/opt/telephony" name="DroidTh3ory/android_frameworks_opt_telephony" remote="gh" revision="killrom" />
+  <project path="frameworks/rs" name="ParanoidAndroid/android_frameworks_rs" remote="gh" revision="jellybean" />
+  <project path="hardware/qcom/display" name="ParanoidAndroid/hardware_qcom_display" remote="gh" revision="jb-mr1" />
+  <!-- <project path="hardware/ti/omap4xxx" name="DroidTh3ory/platform_hardware_ti_omap4xxx" remote="gh" revision="killrom" /> -->
+  <project path="packages/apps/PerformanceControl" name="DroidTh3ory/PerformanceControl" remote="gh" revision="killrom" />
+  <project path="packages/apps/Contacts" name="DroidTh3ory/android_packages_apps_Contacts" remote="gh" revision="killrom" />
+  <project path="packages/apps/Mms" name="DroidTh3ory/android_packages_apps_Mms" remote="gh" revision="killrom" />
+  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" revision="jb-mr1-release" />
+  <project path="packages/apps/Phone" name="DroidTh3ory/platform_packages_apps_phone" remote="gh" revision="killrom" />
+  <project path="packages/apps/Settings" name="DroidTh3ory/platform_packages_apps_settings" remote="gh" revision="killrom" />
+  <project path="packages/apps/KILLRHome" name="DroidTh3ory/android_packages_apps_killrhome" remote="gh" revision="killrom" />
+  <project path="system/core" name="DroidTh3ory/platform_system_core" remote="gh" revision="killrom" />
+  <project path="system/extras" name="DroidTh3ory/platform_system_extras" remote="gh" revision="killrom" />
+  <project path="system/security" name="ParanoidAndroid/android_system_security" remote="gh" revision="jellybean" />
+  
+  <!-- local misc -->
+  <project path="packages/apps/Torch" name="CyanogenMod/android_packages_apps_Torch" remote="gh" revision="cm-10.1" />
+  <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="gh" revision="cm-10.1" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="linux,arm" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="linux,arm" revision="master" />
 
   <!-- omapzoom projects -->
   <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="p-jb-mr1-release" />
