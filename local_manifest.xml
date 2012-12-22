@@ -45,11 +45,12 @@
 
   <!-- AOSP STS specific removals -->
   <remove-project name="platform/hardware/libhardware_legacy" />
+  <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/ti/wpan" />
-
 
   <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" remote="gh" revision="cm-10.1" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" remote="gh" revision="cm-10.1" />
+  <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" remote="gh" revision="cm-10.1" />
 
   <!-- AOSP replacements -->
   <project path="build" name="DroidTh3ory/android_build" remote="gh" revision="killrom">
