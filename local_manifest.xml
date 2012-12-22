@@ -58,7 +58,7 @@
   <project path="build" name="DroidTh3ory/android_build" remote="gh" revision="killrom">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="ParanoidAndroid/android_bionic" remote="gh" revision="jellybean" />
+  <project path="bionic" name="DroidTh3ory/android_bionic" remote="gh" revision="jellybean" />
   <project path="external/libnfc-nci" name="platform/external/libnfc-nci" revision="jb-mr1-release" />
   <project path="external/oprofile" name="platform/external/oprofile" remote="linaro" revision="linaro_android_4.2.1" />
   <project path="external/elfutils" name="platform/external/elfutils" remote="linaro" revision="master" />
