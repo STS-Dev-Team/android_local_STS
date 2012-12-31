@@ -74,7 +74,7 @@
   <project path="frameworks/native" name="DroidTh3ory/platform_frameworks_native" remote="gh" revision="killrom" />
   <project path="frameworks/opt/telephony" name="DroidTh3ory/android_frameworks_opt_telephony" remote="gh" revision="killrom" />
   <project path="frameworks/rs" name="ParanoidAndroid/android_frameworks_rs" remote="gh" revision="jellybean" />
-  <project path="hardware/qcom/display" name="ParanoidAndroid/hardware_qcom_display" remote="gh" revision="jellybean" />
+  <project path="hardware/qcom/display" name="DroidTh3ory/hardware_qcom_display" remote="gh" revision="jellybean" />
   <project path="hardware/ti/omap4xxx" name="DroidTh3ory/platform_hardware_ti_omap4xxx" remote="gh" revision="killrom" />
   <project path="packages/apps/PerformanceControl" name="DroidTh3ory/PerformanceControl" remote="gh" revision="killrom" />
   <project path="packages/apps/Contacts" name="DroidTh3ory/android_packages_apps_Contacts" remote="gh" revision="killrom" />
