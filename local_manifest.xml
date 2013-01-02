@@ -79,7 +79,7 @@
   <project path="packages/apps/Contacts" name="DroidTh3ory/android_packages_apps_Contacts" remote="gh" revision="killrom" />
   <project path="packages/apps/Mms" name="DroidTh3ory/android_packages_apps_Mms" remote="gh" revision="killrom" />
   <project path="packages/apps/DeskClock" name="CyanogenMod/android_packages_apps_DeskClock" remote="gh" revision="cm-10.1" />
-  <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" remote="gh" revision="cm-10.1" />
+  <project path="packages/apps/LockClock" name="DroidTh3ory/android_packages_apps_LockClock" remote="gh" revision="killrom" />
   <project path="packages/apps/Phone" name="DroidTh3ory/platform_packages_apps_phone" remote="gh" revision="killrom" />
   <project path="packages/apps/Settings" name="DroidTh3ory/platform_packages_apps_settings" remote="gh" revision="killrom" />
   <project path="packages/apps/KILLRHome" name="DroidTh3ory/android_packages_apps_killrhome" remote="gh" revision="killrom" />
@@ -130,4 +130,3 @@
   <project path="vendor/tmobile/products/themes" name="CyanogenMod/android_vendor_tmobile_products_themes" remote="gh" revision="cm-10.1" />
 
 </manifest>
-
