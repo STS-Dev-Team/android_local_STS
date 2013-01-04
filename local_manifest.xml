@@ -39,6 +39,7 @@
   <remove-project name="platform/packages/apps/QuickSearchBox" />
   <remove-project name="platform/packages/apps/Phone" />
   <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
   <remove-project name="platform/packages/providers/CalendarProvider" />
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/extras" />
@@ -83,6 +84,7 @@
   <project path="packages/apps/Phone" name="DroidTh3ory/platform_packages_apps_phone" remote="gh" revision="killrom" />
   <project path="packages/apps/Settings" name="DroidTh3ory/platform_packages_apps_settings" remote="gh" revision="killrom" />
   <project path="packages/apps/KILLRHome" name="DroidTh3ory/android_packages_apps_killrhome" remote="gh" revision="killrom" />
+  <project path="packages/inputmethods/LatinIME" name="DroidTh3ory/android_packages_inputmethods_LatinIME" remote="gh" revision="killrom" />
   <project path="system/core" name="DroidTh3ory/platform_system_core" remote="gh" revision="killrom" />
   <project path="system/extras" name="DroidTh3ory/platform_system_extras" remote="gh" revision="killrom" />
   <project path="system/security" name="ParanoidAndroid/android_system_security" remote="gh" revision="jellybean" />
