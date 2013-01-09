@@ -4,6 +4,9 @@
   <remote  name="omapzoom"
            fetch="git://git.omapzoom.org/" />
 
+  <remote  name="gh"
+           fetch="git://github.com/" />
+
   <!-- CM removals -->
   <!-- <remove-project name="CyanogenMod/android_bionic" /> -->
   <remove-project name="CyanogenMod/android_build" />
@@ -31,14 +34,20 @@
   <remove-project name="CyanogenMod/android_packages_providers_TelephonyProvider" />
   <remove-project name="CyanogenMod/android_system_core" />
   
+  <!-- ProjectLense BootMenu CM removals -->
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" />
+  <remove-project name="CyanogenMod/android_bootable_recovery" />
+  <remove-project name="CyanogenMod/android_external_bootmenu" />
+  
+  
   <!-- CM replacements -->
-  <project path="build" name="STS-Dev-Team/android_build" >
+  <project path="build" name="MotorolaSpyder/android_build" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <!-- <project path="bionic" name="STS-Dev-Team/android_bionic" /> -->
   <project path="development" name="STS-Dev-Team/android_development" />
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
-  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" revision="jellybean-3way" />
+  <project path="frameworks/base" name="MotorolaSpyder/android_frameworks_base" revision="jellybean-3way" />
   <project path="frameworks/native" name="STS-Dev-Team/android_frameworks_native" />
   <project path="hardware/libhardware" name="STS-Dev-Team/android_hardware_libhardware" />
   <project path="hardware/libhardware_legacy" name="STS-Dev-Team/android_hardware_libhardware_legacy" />
@@ -46,32 +55,26 @@
   <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" revision="jellybean-stock" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" revision="jellybean" />
   <project path="packages/apps/Bluetooth" name="STS-Dev-Team/android_packages_apps_Bluetooth" />
-  <project path="packages/apps/Contacts" name="STS-Dev-Team/android_packages_apps_Contacts" />
-  <project path="packages/apps/Mms" name="STS-Dev-Team/android_packages_apps_Mms" />
+  <project path="packages/apps/Contacts" name="MotorolaSpyder/android_packages_apps_Contacts" />
+  <project path="packages/apps/Mms" name="MotorolaSpyder/android_packages_apps_Mms" />
   <project path="packages/apps/Phone" name="STS-Dev-Team/android_packages_apps_Phone" />
-  <project path="packages/apps/Settings" name="STS-Dev-Team/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="MotorolaSpyder/android_packages_apps_Settings" />
   <project path="packages/apps/Stk" name="STS-Dev-Team/android_packages_apps_Stk" />
   <project path="packages/apps/VoiceDialer" name="STS-Dev-Team/android_packages_apps_VoiceDialer" />
-  <project path="packages/providers/ContactsProvider" name="STS-Dev-Team/android_packages_providers_ContactsProvider" />
+  <project path="packages/providers/ContactsProvider" name="MotorolaSpyder/android_packages_providers_ContactsProvider" />
   <project path="packages/providers/DrmProvider" name="STS-Dev-Team/android_packages_providers_DrmProvider" />
   <project path="packages/providers/TelephonyProvider" name="STS-Dev-Team/android_packages_providers_TelephonyProvider" />
-  <project path="system/core" name="STS-Dev-Team/android_system_core" />
+  <project path="system/core" name="MotorolaSpyder/android_system_core" />
 
   <!-- local devices -->
-  <project path="device/motorola/common" name="STS-Dev-Team/android_device_motorola_common" revision="jb" />
-  <project path="device/motorola/edison" name="STS-Dev-Team/android_device_motorola_edison" revision="jb" />
-  <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb" />
-  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb" />
-  <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" revision="jb" />
-  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb" />
+  <project path="device/motorola/common" name="MotorolaSpyder/android_device_motorola_common" remote="gh" revision="jb" />
+  <project path="device/motorola/spyder" name="MotorolaSpyder/android_device_motorola_spyder" remote="gh" revision="jb" />
+  <project path="device/motorola/umts_spyder" name="MotorolaSpyder/android_device_motorola_umts_spyder" remote="gh" revision="jb" />
 
   <!-- local vendor -->
-  <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb" />
-  <project path="vendor/motorola/edison" name="STS-Dev-Team/android_vendor_motorola_edison" revision="master" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="master" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="master"  />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="master" />
+  <project path="vendor/motorola/common" name="MotorolaSpyder/android_vendor_motorola_common" remote="gh" revision="jb" />
+  <project path="vendor/motorola/spyder" name="MotorolaSpyder/android_vendor_motorola_spyder" remote="gh" revision="master" />
+  <project path="vendor/motorola/umts_spyder" name="MotorolaSpyder/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
 
   <!-- local misc -->
   <project path="frameworks/opt/mms" name="STS-Dev-Team/android_frameworks_opt_mms" revision="master"/>
@@ -89,6 +92,12 @@
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" remote="omapzoom" revision="p-jb-release" />
   <project path="packages/apps/OMAPCamera" name="platform/packages/apps/OMAPCamera" remote="omapzoom" revision="jb-release" />
 
-  <project path="packages/apps/otaupdater" name="STS-Dev-Team/ota-update-centre" revision="noicon" />
-
+  <project path="packages/apps/otaupdater" name="MotorolaSpyder/ota-update-centre" remote="gh" revision="noicon" />
+  
+  <!-- local ProjectLense BootMenu CM Replacements-->
+  <project path="bootable/recovery" name="ProjectLense/android_bootable_recovery" revision="jellybean" />
+  <project path="external/bootmenu" name="ProjectLense/android_external_bootmenu" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" name="ProjectLense/android_prebuilts_gcc_linux-x86-32_arm_arm-linux-androideabi-4.6" remote="gh" revision="jellybean" />
+  
+  
 </manifest>
