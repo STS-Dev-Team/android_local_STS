@@ -1,5 +1,7 @@
 Local manifest addon for KILLrom (JB 4.2.1) for OMAP4 devices
 
+USE THE KILLROM manifest now it includes all supported devices
+
 Getting Started
 ---------------
 
@@ -16,11 +18,15 @@ To initialize your local repository using the AOSP manifest, use commands like t
 
     repo init -u https://android.googlesource.com/platform/manifest -b android-4.2.1_r1
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/killrom/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/DroidTh3ory/android_local_killrom/master/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/killrom/local_manifest.xml
-		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
+    	( or Download: https://github.com/DroidTh3ory/android_local_killrom/master/local_manifest.xml
+    and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:
 
     repo sync
+    
+OK there are a few quirks, some prerequisites need to compile first so do this:
+    
+    make -j8 init && make -j8 adbd && make -j8 bacon
