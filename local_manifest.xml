@@ -40,11 +40,11 @@
   <!-- local vendor projects -->
   <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common"  revision="ics" />
   <project path="vendor/motorola/edison" name="STS-Dev-Team/android_vendor_motorola_edison" revision="master" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="ics" />
-  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana"  revision="ics" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="ics" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa"  revision="ics"/>
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="ics" />
+  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="refs/tags/ics" />
+  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana"  revision="refs/tags/ics" />
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="refs/tags/ics" />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa"  revision="refs/tags/ics"/>
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="refs/tags/ics" />
 
   <project path="kernel/motorola/mapphone" name="STS-Dev-Team/kernel_mapphone_kexec" revision="3.0.31" />
 
