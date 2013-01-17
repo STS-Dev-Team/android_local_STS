@@ -39,10 +39,10 @@
   <!-- local vendor -->
   <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="ics" />
   <project path="vendor/motorola/edison" name="STS-Dev-Team/android_vendor_motorola_edison" remote="gh" revision="master" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" remote="gh" revision="ics" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="ics" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" remote="gh" revision="ics"  />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="ics" />
+  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" remote="gh" revision="refs/tags/ics" />
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="refs/tags/ics" />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" remote="gh" revision="refs/tags/ics"  />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="refs/tags/ics" />
 
   <!-- local misc -->
   <project path="packages/apps/FileManager" name="STS-Dev-Team/android_packages_apps_FileManager" remote="gh" revision="ics" />
