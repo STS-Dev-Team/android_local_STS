@@ -72,11 +72,11 @@
   <!-- local vendor -->
   <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="jb" />
   <project path="vendor/motorola/edison" name="STS-Dev-Team/android_vendor_motorola_edison" remote="gh" revision="master" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" remote="gh" revision="master" />
-  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" remote="gh" revision="master" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="master" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" remote="gh" revision="master"  />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
+  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" remote="gh" revision="refs/tags/4.1" />
+  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" remote="gh" revision="refs/tags/4.1" />
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="refs/tags/4.1" />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" remote="gh" revision="refs/tags/4.1"  />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="refs/tags/4.1" />
 
   <!-- local misc -->
   <project path="frameworks/opt/mms" name="STS-Dev-Team/android_frameworks_opt_mms" remote="gh" revision="master"/>
