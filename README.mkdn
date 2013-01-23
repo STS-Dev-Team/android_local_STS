@@ -1,4 +1,4 @@
-Local manifest addon for Cyanogenmod 10.1 (JB 4.2.1) for OMAP4 devices
+Local manifest addon for AOKP (JB 4.2.1) for OMAP4 devices
 
 Getting Started
 ---------------
@@ -14,11 +14,11 @@ Make a build directory:
 
 To initialize your local repository using the Cyanogemod manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+    repo init -u https://github.com/AOKP/platform_manifest.git -b jb-mr1
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/cm-10.1/local_manifest.xml
+    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/AOKP-4.2/local_manifest.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/cm-10.1/local_manifest.xml
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/AOKP-4.2/local_manifest.xml
 		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
 
 Then to sync up:

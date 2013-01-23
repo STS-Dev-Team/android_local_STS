@@ -4,39 +4,42 @@
   <remote  name="omapzoom" fetch="git://git.omapzoom.org/" />
   <remote  name="gh" fetch="git://github.com/" />
 
-  <remove-project name="CyanogenMod/android_frameworks_av" />
-  <remove-project name="CyanogenMod/android_frameworks_base" />
-  <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
-  <remove-project name="CyanogenMod/android_hardware_ti_wpan" />
-  <remove-project name="CyanogenMod/android_system_core" />
+  <remove-project name="AOKP/frameworks_av" />
+  <remove-project name="AOKP/frameworks_base" />
+  <remove-project name="platform/hardware/ti/omap4xxx" />
+  <remove-project name="platform/hardware/ti/wlan" />
+  <remove-project name="platform/hardware/ti/wpan" />
+  <remove-project name="AOKP/android_system_core" />
 
-  <!-- CM replacements -->
-  <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
-  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
-  <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" />
-  <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" />
-  <project path="system/core" name="STS-Dev-Team/android_system_core" />
+  <!-- AOKP replacements -->
+  <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" remote="gh" revision="cm-10.1" />
+  <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" remote="gh" revision="aokp-jb-mr1" />
+  <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" remote="gh" revision="cm-10.1" />
+  <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="gh" revision="cm-10.1" />
+  <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" remote="gh" revision="cm-10.1" />
+  <project path="system/core" name="STS-Dev-Team/android_system_core" remote="gh" revision="cm-10.1" />
 
   <!-- omapzoom projects -->
   <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="p-jb-mr1-release" />
 
   <!-- OMAP4 projects -->
-  <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" revision="master" />
-  <project path="kernel/motorola/mapphone" name="STS-Dev-Team/kernel_mapphone_kexec" revision="3.0.31" />
+  <project path="kernel/motorola/omap4_xt912" name="STS-Dev-Team/kernel_omap4_xt912" remote="gh" revision="master" />
+  <project path="kernel/motorola/mapphone" name="STS-Dev-Team/kernel_mapphone_kexec" remote="gh" revision="3.0.31" />
+  <project path="prebuilt/linux-x86/toolchain/arm-eabi-4.4.3" name="STS-Dev-Team/arm-eabi-4.4.3" remote="gh" revision="master" />
 
-  <project path="device/motorola/common" name="STS-Dev-Team/android_device_motorola_common" revision="jb-mr1" />
-  <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" revision="jb-mr1" />
-  <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" revision="jb-mr1" />
-  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb-mr1" />
-  <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" revision="jb-mr1" />
-  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb-mr1" />
+  <project path="device/motorola/common" name="STS-Dev-Team/android_device_motorola_common" remote="gh" revision="jb-mr1" />
+  <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" remote="gh" revision="jb-mr1" />
+  <project path="device/motorola/targa" name="STS-Dev-Team/android_device_motorola_targa" remote="gh" revision="jb-mr1" />
+  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" remote="gh" revision="jb-mr1-ics-kernel" />
+  <project path="device/motorola/maserati" name="STS-Dev-Team/android_device_motorola_maserati" remote="gh" revision="jb-mr1" />
+  <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" remote="gh" revision="jb-mr1" />
 
-  <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb-mr1" />
-  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" revision="master" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="master" />
-  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="master" />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="master" />
+  <project path="vendor/motorola/common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="jb-mr1" />
+  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" remote="gh" revision="master" />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" remote="gh" revision="master" />
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" remote="gh" revision="master-ics" />
+  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" remote="gh" revision="master" />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" remote="gh" revision="master" />
 
   </manifest>
 
