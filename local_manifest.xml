@@ -6,7 +6,6 @@
 
   <remove-project name="AOKP/frameworks_av" />
   <remove-project name="AOKP/frameworks_base" />
-  <remove-project name="platform/hardware/ti/omap4xxx" />
   <remove-project name="platform/hardware/ti/wlan" />
   <remove-project name="platform/hardware/ti/wpan" />
   <remove-project name="AOKP/android_system_core" />
@@ -14,7 +13,6 @@
   <!-- AOKP replacements -->
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" remote="gh" revision="cm-10.1" />
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" remote="gh" revision="aokp-jb-mr1" />
-  <project path="hardware/ti/omap4xxx" name="CyanogenMod/android_hardware_ti_omap4xxx" remote="gh" revision="cm-10.1" />
   <project path="hardware/ti/wlan" name="CyanogenMod/android_hardware_ti_wlan" remote="gh" revision="cm-10.1" />
   <project path="hardware/ti/wpan" name="Hashcode/android_hardware_ti_wpan" remote="gh" revision="cm-10.1" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" remote="gh" revision="cm-10.1" />
