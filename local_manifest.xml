@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <manifest>
-
-  <remote  name="omapzoom" fetch="git://git.omapzoom.org/" />
+\
   <remote  name="gh" fetch="git://github.com/" />
 
   <remove-project name="CyanogenMod/android_frameworks_av" />
@@ -12,9 +11,6 @@
   <project path="frameworks/av" name="STS-Dev-Team/android_frameworks_av" />
   <project path="frameworks/base" name="STS-Dev-Team/android_frameworks_base" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" />
-
-  <!-- omapzoom projects -->
-  <project path="external/wpa_supplicant_8_ti" name="platform/external/wpa_supplicant_8_ti" remote="omapzoom" revision="p-jb-mr1-release" />
 
   <!-- OMAP4 projects -->
   <project path="kernel/motorola/omap4-common" name="STS-Dev-Team/kernel_omap4_xt912" revision="master" />
