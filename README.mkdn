@@ -1,26 +1,28 @@
-Local manifest addon for Cyanogenmod 10.1 (JB 4.2.1) for kexec on OMAP4 devices
+Local manifest addon for Ubuntu phablet 10.1 (JB 4.2.1) for kexec on OMAP4 devices
 
 Getting Started
 ---------------
 
 To get started with Android, you'll need to get
-familiar with [Git and Repo](http://source.android.com/download/using-repo).
+familiar with [Git and Repo](http://source.android.com/download/using-repo) and
+https://wiki.ubuntu.com/Touch/Porting#Contributing_back
 
 Make a build directory:
 
-	mkdir Andoid (or whatever name you choose)
+	mkdir Andoid (or whatever name you choose )
 	cd Android (or the name  you chose)
+	mkdir .repo/local_manifests
 	
 
-To initialize your local repository using the Cyanogemod manifest, use commands like these:
+To initialize your local repository using the Ubuntu phablet manifest, use commands like these:
 
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-10.1
+    phablet-dev-bootstrap [target_directory that you chose]
     
-    curl -L -o .repo/local_manifest.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/cm-10.1-kexec/local_manifest.xml
+    curl -L -o .repo/local_manifests/phablet.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/phablet/phablet.xml
 
-    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/cm-10.1-kexec/local_manifest.xml
-		and place it in ~/Android/.repo/local_manifest.xml (or ~/'name you chose'/.repo)
+    	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/phablet/phablet.xml
+		and place it in ~/Android/.repo/local_manifests/phablet.xml (or ~/'name you chose'/.repo/local_manifests)
 
 Then to sync up:
 
-    repo sync
+    phablet-dev-bootstrap [target_directory that you chose] -c
