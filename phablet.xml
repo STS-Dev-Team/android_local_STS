@@ -5,7 +5,6 @@
 
   <remove-project name="CyanogenMod/android_bionic" />
   <remove-project name="CyanogenMod/android_build" />
-  <remove-project name="CyanogenMod/android_hardware_ti_omap4xxx" />
   <remove-project name="CyanogenMod/android_system_core" />
 
   <!-- Ubuntu phablet replacements -->
@@ -13,7 +12,6 @@
   <project path="build" name="STS-Dev-Team/android_build" remote="gh" revision="phablet" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="hardware/ti/omap4xxx" name="STS-Dev-Team/android_hardware_ti_omap4xxx" remote="gh" revision="phablet-10.1" />
   <project path="system/core" name="STS-Dev-Team/android_system_core" remote="gh" revision="phablet-10.1" />
   <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="gh" revision="cm-10.1" />
 
