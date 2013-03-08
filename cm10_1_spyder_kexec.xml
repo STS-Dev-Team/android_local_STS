@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <manifest>
+
+  <remote  name="gh" fetch="git://github.com/" />
+
+  <remove-project name="CyanogenMod/android_system_core" />
+
+  <!-- CM replacements -->
+  <project path="system/core" name="STS-Dev-Team/android_system_core" />
+
+  <!-- OMAP4 projects -->
+  <project path="kernel/motorola/omap4-kexec-common" name="STS-Dev-Team/kernel_mapphone_kexec" revision="stock-ics-kexec" />
+
+  <project path="device/motorola/omap4-common" name="STS-Dev-Team/android_device_motorola_common" revision="jb-mr1-kexec" />
+
+  <project path="device/motorola/spyder" name="STS-Dev-Team/android_device_motorola_spyder" revision="jb-mr1-kexec" />
+
+  <project path="vendor/motorola/omap4-common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb-mr1" />
+  <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master-ics" />
+
+  </manifest>
+
