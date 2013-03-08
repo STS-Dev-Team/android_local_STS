@@ -18,10 +18,10 @@
   <project path="device/motorola/umts_spyder" name="STS-Dev-Team/android_device_motorola_umts_spyder" revision="jb-mr1-kexec" />
 
   <project path="vendor/motorola/omap4-common" name="STS-Dev-Team/android_vendor_motorola_common" revision="jb-mr1" />
-  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
+  <project path="vendor/motorola/maserati" name="STS-Dev-Team/android_vendor_motorola_maserati" revision="master" />
   <project path="vendor/motorola/spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master-ics" />
-  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
-  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_spyder" revision="master" />
+  <project path="vendor/motorola/targa" name="STS-Dev-Team/android_vendor_motorola_targa" revision="master" />
+  <project path="vendor/motorola/umts_spyder" name="STS-Dev-Team/android_vendor_motorola_umts_spyder" revision="master" />
 
   </manifest>
 
