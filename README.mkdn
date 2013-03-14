@@ -19,6 +19,9 @@ To initialize your local repository using the Ubuntu phablet manifest, use comma
     phablet-dev-bootstrap [target_directory that you chose]
     
     curl -L -o .repo/local_manifests/phablet.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/phablet/phablet.xml
+    
+    or for Solana
+    curl -L -o .repo/local_manifests/solana.xml -O -L https://raw.github.com/STS-Dev-Team/android_local_STS/phablet/solana.xml
 
     	( or Download: https://github.com/STS-Dev-Team/android_local_STS/blob/phablet/phablet.xml
 		and place it in ~/Android/.repo/local_manifests/phablet.xml (or ~/'name you chose'/.repo/local_manifests)

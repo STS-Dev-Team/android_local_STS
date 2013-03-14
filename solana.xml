@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <manifest>
+
+  <remote  name="gh" fetch="git://github.com/" />
+
+  <remove-project name="CyanogenMod/android_build" />
+  <remove-project name="CyanogenMod/android_system_core" />
+
+  <!-- Ubuntu phablet replacements -->
+  <project path="build" name="STS-Dev-Team/android_build" remote="gh" revision="phablet" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="system/core" name="STS-Dev-Team/android_system_core" remote="gh" revision="phablet-10.1" />
+  <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="gh" revision="cm-10.1" />
+
+
+ <!-- OMAP4 projects -->
+  <project path="kernel/motorola/omap4-common" name="STS-Dev-Team/kernel_omap4_xt912" remote="gh" revision="master" />
+  <project path="kernel/motorola/omap4-kexec-common" name="STS-Dev-Team/kernel_mapphone_kexec" remote="gh" revision="3.0.31" />
+
+  <project path="device/motorola/kexec" name="STS-Dev-Team/android_device_motorola_kexec" remote="gh" revision="master" />
+  <project path="device/motorola/omap4-kexec-common" name="STS-Dev-Team/android_device_motorola_omap4-kexec-common" remote="gh" revision="phablet" />
+  <project path="device/motorola/solana" name="STS-Dev-Team/android_device_motorola_solana" remote="gh" revision="phablet" />
+
+  <project path="vendor/motorola/omap4-common" name="STS-Dev-Team/android_vendor_motorola_common" remote="gh" revision="phablet" />
+  <project path="vendor/motorola/solana" name="STS-Dev-Team/android_vendor_motorola_solana" remote="gh" revision="master" />
+
+  </manifest>
