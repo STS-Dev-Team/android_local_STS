@@ -10,7 +10,6 @@
   <project path="build" name="STS-Dev-Team/android_build" remote="gh" revision="phablet" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="system/core" name="STS-Dev-Team/android_system_core" remote="gh" revision="phablet-10.1" />
   <project path="external/bluetooth/bluedroid" name="CyanogenMod/android_external_bluetooth_bluedroid" remote="gh" revision="cm-10.1" />
   <project path="external/iproute2" name="CyanogenMod/android_external_iproute2" remote="gh" revision="cm-10.1" />
   <project path="external/ipsec-tools" name="CyanogenMod/android_external_ipsec-tools" remote="gh" revision="cm-10.1" />
