@@ -17,7 +17,7 @@
   <project path="system/netd" name="CyanogenMod/android_system_netd" remote="gh" revision="cm-10.1" />
 
  <!-- OMAP4 projects -->
-  <project path="kernel/motorola/omap4-kexec-common" name="STS-Dev-Team/kernel_mapphone_kexec" remote="gh" revision="jb-mr1" />
+  <project path="kernel/motorola/omap4-kexec-common" name="CyanogenMod/android_kernel_motorola_omap4-common" remote="gh" revision="cm-10.1" />
 
   <project path="device/motorola/kexec" name="STS-Dev-Team/android_device_motorola_kexec" remote="gh" revision="master" />
   <project path="device/motorola/omap4-kexec-common" name="STS-Dev-Team/android_device_motorola_omap4-kexec-common" remote="gh" revision="phablet" />
