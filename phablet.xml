@@ -4,7 +4,6 @@
   <remote  name="gh" fetch="git://github.com/" />
 
   <remove-project name="CyanogenMod/android_build" />
-  <remove-project name="CyanogenMod/android_system_core" />
 
   <!-- Ubuntu phablet replacements -->
   <project path="build" name="STS-Dev-Team/android_build" remote="gh" revision="phablet" >
