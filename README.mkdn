@@ -9,7 +9,7 @@ https://wiki.ubuntu.com/Touch/Porting#Contributing_back
 
 Make a build directory:
 
-	mkdir Andoid (or whatever name you choose )
+	mkdir Android (or whatever name you choose )
 	cd Android (or the name  you chose)
 	mkdir .repo/local_manifests
 	
